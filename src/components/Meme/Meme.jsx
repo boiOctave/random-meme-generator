@@ -1,26 +1,41 @@
 import React from "react";
-import "./Meme.css";
+import "./meme.css";
+import memesData from "./memesData";
 
 const Meme = () => {
+
+    const getRandomMemes = () => {
+        //store the imported content(memesData) in a variable - memesArray
+        const memesArray = memesData(); 
+        //accessing the array of objects called memes from what we imported
+        const randomMemes = memesArray.data.memes;
+        // Get a random index within the array length
+        const randomIndex = Math.floor(Math.random() * randomMemes.length);
+        const url = randomMemes[randomIndex].url;
+        console.log(url);
+    }
+
     return(
         <main>
-            <form className="form">
+            <div className="form">
                 <div className="input--container">
                     <input 
                         className="form--input"
-                        placeholder="Left Text"
+                        placeholder="Top Text"
                         type="text" 
                         />
                     <input 
                         className="form--input"
-                        placeholder="Right Text"
+                        placeholder="Bottom Text"
                         type="text" 
                         />
                 </div>
                 <button
-                    className="form--button">Get a new meme image 🖼
+                    onClick={getRandomMemes}
+                    className="form--button">
+                        Get a new meme image 🖼
                 </button>
-            </form>
+            </div>
         </main>
     )
 }
