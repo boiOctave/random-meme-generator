@@ -35,6 +35,11 @@ input{
     border-radius: 4px;
     border: none;
     color: white;
-    background: linear-gradient(90deg, rgb(113, 31, 141) 1.14%, rgb(168, 24, 218) 100%);
+    background: rgb(255, 139, 56);
     cursor: pointer;
+}
+.image--container{
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.2);
 }

@@ -1,8 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import "./meme.css";
 import memesData from "./memesData";
 
 const Meme = () => {
+
+    const [memeImage, setMemeImage] = useState("");
 
     const getRandomMemes = () => {
         //store the imported content(memesData) in a variable - memesArray
@@ -12,7 +15,8 @@ const Meme = () => {
         // Get a random index within the array length
         const randomIndex = Math.floor(Math.random() * randomMemes.length);
         const url = randomMemes[randomIndex].url;
-        console.log(url);
+        
+        setMemeImage(url);
     }
 
     return(
@@ -33,8 +37,11 @@ const Meme = () => {
                 <button
                     onClick={getRandomMemes}
                     className="form--button">
-                        Get a new meme image 🖼
+                        Get a new meme image 
                 </button>
+                <div className="">
+                    <img src={memeImage} alt="" className="image--container" />
+                </div> 
             </div>
         </main>
     )

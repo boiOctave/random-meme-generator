@@ -10,13 +10,14 @@ body {
     display: flex;
     align-items: center;
     height: 65px;
-    background: linear-gradient(90deg, rgb(103, 34, 128) 1.18%, rgb(166, 38, 211) 100%);
+    background: rgb(255, 139, 56);
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
 .header--image{
     height: 100%;
     margin-right: 7px;
+    border-radius: 100%;
 }
 .header--title{
     font-size: 1.25rem;
