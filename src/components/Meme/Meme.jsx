@@ -24,7 +24,7 @@ const Meme = () => {
             <div className="content">
 
                 <div className="">
-                    <img src={memeImage} alt="" className="image--container" />
+                    <img src={memeImage} alt="" className="" />
                 </div>
 
                 <button
