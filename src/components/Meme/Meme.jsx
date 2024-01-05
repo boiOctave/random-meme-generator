@@ -5,7 +5,7 @@ import memesData from "./memesData";
 
 const Meme = () => {
 
-    const [memeImage, setMemeImage] = useState("");
+    const [memeImage, setMemeImage] = useState("https://i.imgflip.com/1g8my4.jpg");
 
     const getRandomMemes = () => {
         //store the imported content(memesData) in a variable - memesArray
@@ -21,27 +21,18 @@ const Meme = () => {
 
     return(
         <main>
-            <div className="form">
-                <div className="input--container">
-                    <input 
-                        className="form--input"
-                        placeholder="Top Text"
-                        type="text" 
-                        />
-                    <input 
-                        className="form--input"
-                        placeholder="Bottom Text"
-                        type="text" 
-                        />
-                </div>
-                <button
-                    onClick={getRandomMemes}
-                    className="form--button">
-                        Get a new meme image 
-                </button>
+            <div className="content">
+
                 <div className="">
                     <img src={memeImage} alt="" className="image--container" />
-                </div> 
+                </div>
+
+                <button
+                    onClick={getRandomMemes}
+                    className="content--button">
+                        Get a new meme image 
+                </button>
+
             </div>
         </main>
     )
