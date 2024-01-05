@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./meme.css";
+import "./Meme.css";    //Wrong file extension,*****  import "./meme.css"   was used intead of ,*** import "./Meme.css" 
 import memesData from "./memesData";
 
 const Meme = () => {

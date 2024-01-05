@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css";
+import "./Header.css"   //Wrong file extension,*****  import "./header.css"   was used intead of ,*** import "./Header.css" 
 
 const Header = () => {
     return(
